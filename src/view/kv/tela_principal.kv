@@ -1,0 +1,38 @@
+#: import CadastroPessoas src.view.pessoasview
+ScreenManager:
+    TelaInicial:
+    CadastroPessoas:
+
+
+
+
+<TelaInicial>:
+    MDGridLayout:
+        cols:1
+        rows:3
+        MDGridLayout:
+            spacing:10
+            rows:2
+            cols:6
+            MDRaisedButton:
+                text: "Cadastros"
+                on_press: root.manager.current = 'cadastro_pessoa'
+            MDRaisedButton:
+                text: "Dízimos"
+
+            MDRaisedButton:
+                text: "Cadastros"
+            MDRaisedButton:
+                text: "Dízimos"
+
+
+<CadastroPessoas>:
+
+    name: 'cadastro_pessoa'
+    MDGridLayout:
+        cols:2
+        rows:1
+        MDLabel:
+            text: 'Nome'
+        MDTextField:
+            hint_text: 'Nome'

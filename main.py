@@ -1,19 +1,9 @@
 from kivymd.app import MDApp
-from kivymd.uix.screen import MDScreen
-
-from kivy.lang.builder import Builder
-
-
-KV = Builder.load_file('./kv_files/tela_principal.kv')
-
-
-class TelaInicial(MDScreen):
-    def build(self):
-        return KV
+from src.view.mainView import Builder
 
 class Program(MDApp):
     def build(self):
-        return TelaInicial()
+        return Builder.load_file('./src/view/kv/tela_principal.kv')
 
 if __name__ == '__main__':
     
