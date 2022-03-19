@@ -4,8 +4,6 @@ ScreenManager:
     CadastroPessoas:
 
 
-
-
 <TelaInicial>:
     MDGridLayout:
         cols:1
@@ -29,10 +27,16 @@ ScreenManager:
 <CadastroPessoas>:
 
     name: 'cadastro_pessoa'
-    MDGridLayout:
-        cols:2
-        rows:1
+    MDFloatLayout:
         MDLabel:
+            text: 'Cadastro de Pessoas'
+            font_style: "H2"
+            pos_hint: { "x": 0.2 , 'center_y':.9}
+        MDLabel:
+            pos_hint: {"center_y":0.53, "x": 0.2}
             text: 'Nome'
         MDTextField:
-            hint_text: 'Nome'
+            mode: "rectangle"
+            pos_hint: {'y': 0.5, "center_x": 0.5 }
+            size_hint: 0.4,None
+            hint_text: 'Primeiro Nome'
