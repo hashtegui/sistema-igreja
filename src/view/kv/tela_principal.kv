@@ -33,30 +33,40 @@ ScreenManager:
             font_style: "H2"
             pos_hint: { "x": 0.2 , 'center_y':.9}
         MDTextField:
+            id:nome
             mode: "rectangle"
             pos_hint: {'y': 0.5, "center_x": 0.5 }
             size_hint: 0.4,None
             hint_text: 'Primeiro Nome'
+            multiline: False
 
         MDTextField:
+            id: sobrenome
             mode: "rectangle"
             pos_hint: {'y': 0.4, "center_x": 0.5 }
             size_hint: 0.4,None
             hint_text: 'Sobrenome'
 
 
-        MDTextField:
-            id: text_field
+        TextFieldData:
+            id: dt_nascimento
             mode: "rectangle"
             pos_hint: {'y': 0.3, "center_x": 0.5 }
+            text:root.data
             size_hint: 0.4,None
-            value: root.data
-            hint_text: 'Teste data'
-            #on_focus: root.show_date()
+            hint_text: 'Data de Nacimento'
 
         MDIconButton:
             icon: "timetable"
             pos_hint: {"center_y": .345, "center_x": 0.75}
             theme_text_color: "Hint"
+            on_release: root.show_date()
+
+        MDRaisedButton:
+            text: "Salvar"
+            md_bg_color: 0, 0.5, 0, 1
+            pos_hint: {'y': 0.2, "center_x": 0.5 }
+            on_press: root.adiciona(nome.text, sobrenome.text, dt_nascimento.text)
+        
 
             

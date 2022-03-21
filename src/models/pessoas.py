@@ -2,11 +2,11 @@ import datetime
 
 
 class Pessoa():
-    def __init__(self, nome: str, sobrenome: str, data_nascimento: datetime, sexo: str[1]) -> None:
+    def __init__(self, nome: str, sobrenome: str, data_nascimento: datetime, sexo: str) -> None:
         self.__nome: str = nome
         self.__sobrenome: str = sobrenome
         self.__data_nascimento: datetime = data_nascimento
-        self.__sexo: str[1] = sexo
+        self.__sexo: str = sexo
 
     @property
     def nome(self) -> str:
