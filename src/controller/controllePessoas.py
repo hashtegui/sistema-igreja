@@ -3,5 +3,10 @@ from src.models.pessoas import Pessoa
 
 
 class ControllerPessoas:
-    def adiciona(pessoa: Pessoa):
-        print(pessoa.__dict__)
+    lista_Pessoas: list = []
+
+    def adiciona(self, pessoa: Pessoa):
+        self.lista_Pessoas.append(pessoa)
+
+    def lista(self):
+        return [..., self.lista_Pessoas]

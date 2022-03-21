@@ -5,6 +5,7 @@ ScreenManager:
 
 
 <TelaInicial>:
+    name:'tela_inicial'
     MDGridLayout:
         cols:1
         rows:3
@@ -17,9 +18,10 @@ ScreenManager:
                 on_press: root.manager.current = 'cadastro_pessoa'
             MDRaisedButton:
                 text: "Dízimos"
+                on_press: root.listar()
 
             MDRaisedButton:
-                text: "Cadastros"
+                text: "Lista"
             MDRaisedButton:
                 text: "Dízimos"
 
@@ -66,7 +68,9 @@ ScreenManager:
             text: "Salvar"
             md_bg_color: 0, 0.5, 0, 1
             pos_hint: {'y': 0.2, "center_x": 0.5 }
-            on_press: root.adiciona(nome.text, sobrenome.text, dt_nascimento.text)
+            on_press: 
+                root.adiciona(nome.text, sobrenome.text, dt_nascimento.text)
+                root.manager.current = 'tela_inicial'
         
 
             
