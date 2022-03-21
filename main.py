@@ -1,7 +1,14 @@
 from kivymd.app import MDApp
 from src.view.mainView import Builder
 
+
 class Program(MDApp):
+    def on_start(self):
+        
+        print('oi')
+        return super().on_start()
+    
+    
     def build(self):
 #        self.theme_cls.theme_style = "Dark"
         return Builder.load_file('./src/view/kv/tela_principal.kv')

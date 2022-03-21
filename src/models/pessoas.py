@@ -35,3 +35,7 @@ class Pessoa():
     @property
     def sexo(self):
         return self.__sexo
+
+
+    def __repr__(self) -> str:
+        return self.__nome
