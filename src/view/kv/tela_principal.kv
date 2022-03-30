@@ -2,6 +2,7 @@
 ScreenManager:
     TelaInicial:
     CadastroPessoas:
+    ListarPessoas:
 
 
 <TelaInicial>:
@@ -18,7 +19,7 @@ ScreenManager:
                 on_press: root.manager.current = 'cadastro_pessoa'
             MDRaisedButton:
                 text: "Dízimos"
-                on_press: root.listar()
+                on_press: root.manager.current = 'listar_pessoas'
 
             MDRaisedButton:
                 text: "Lista"
@@ -75,5 +76,9 @@ ScreenManager:
                 root.adiciona(nome.text, sobrenome.text, dt_nascimento.text)
                 root.manager.current = 'tela_inicial'
         
-
-            
+<ListarPessoas>:
+    name: 'listar_pessoas'
+    MDRaisedButton:
+        text: 'Voltar'
+        on_press:
+            root.manager.current = 'tela_inicial'

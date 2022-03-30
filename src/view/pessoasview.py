@@ -57,3 +57,17 @@ class TextFieldData(MDTextField):
 
     def on_text(self, instance, value):
         print(value)
+
+
+class ListarPessoas(MDScreen):
+
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.list = ControllerPessoas().lista()
+
+
+    def on_enter(self, *args):
+        cont = 0
+        for item in self.list[1]:
+            cont +=1
+            print(type(item), cont)

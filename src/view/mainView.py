@@ -13,20 +13,12 @@ class TelaInicial(MDScreen,):
         super().__init__(**kw)
         self.con = ControllerPessoas()
 
-    async def on_enter(self):
-        for i in await self.con.lista():
-            self.ids.container.add_widget(
-                OneLineListItem(
-                    text=str(i),
-                    secondary_text=str(i)
-
-                )
-            )
+    def on_enter(self):
+        pass
 
     def listar(self):
         lista = self.con.lista()
-        self.atualiza()
-        print(lista)
+
 
 
 CadastroPessoas()

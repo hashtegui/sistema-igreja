@@ -3,11 +3,6 @@ from src.view.mainView import Builder
 
 
 class Program(MDApp):
-    def on_start(self):
-        
-        print('oi')
-        return super().on_start()
-    
     
     def build(self):
 #        self.theme_cls.theme_style = "Dark"
